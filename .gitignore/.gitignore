@@ -1,0 +1,28 @@
+using System;
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int toffies = 0;
+            int tage = Convert.ToInt32(Console.ReadLine());
+            double pi = Math.PI;
+            
+            for (int x = 0; x < tage; x++)
+            {
+                string input = Console.ReadLine();
+                int radius = Convert.ToInt32(input.Substring(0,1));
+                int hobbit = Convert.ToInt32(input.Substring(2,1)) * 100;
+            
+                double umfang = 2*pi*radius;
+            
+                if (umfang < hobbit)
+                {
+                    toffies +=1;
+                }
+            }
+        Console.WriteLine(toffies);    
+        }
+    }
+}
